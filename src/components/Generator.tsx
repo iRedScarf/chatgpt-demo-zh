@@ -19,7 +19,7 @@ export default () => {
   const [isStick, setStick] = createSignal(false)
   const [temperature, setTemperature] = createSignal(0.6);
   const temperatureSetting = (value: number) => { setTemperature(value) }
-  const maxHistoryMessages = parseInt(import.meta.env.MAX_HISTORY_MESSAGES || '2', 2)
+  // const maxHistoryMessages = parseInt(import.meta.env.MAX_HISTORY_MESSAGES || '2')
 
   createEffect(() => (isStick() && smoothToBottom()))
 
@@ -90,7 +90,7 @@ export default () => {
     try {
       const controller = new AbortController()
       setController(controller)
-      const requestMessageList = [...messageList().slice(-maxHistoryMessages)]
+      const requestMessageList = [...messageList()] // .slice(-maxHistoryMessages)]
       if (currentSystemRoleSettings()) {
         requestMessageList.unshift({
           role: 'system',

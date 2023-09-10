@@ -35,7 +35,7 @@ export default (props: Props) => {
               <Show when={props.canEdit()} fallback={<IconEnv />}>
                 <span onClick={() => props.setCurrentSystemRoleSettings('')} class="sys-edit-btn p-1 rd-50%" > <IconX /> </span>
               </Show>
-              <span>系统规则：</span>
+              <span>系统规则（温度值={temperature()}）：</span>
             </div>
             <div class="mt-1">
               {props.currentSystemRoleSettings()}
