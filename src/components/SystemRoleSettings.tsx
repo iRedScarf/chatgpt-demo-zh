@@ -53,7 +53,7 @@ export default (props: Props) => {
         <div>
           <div class="text-sm fi gap-1 op-50 dark:op-60 mb-2">
             <IconEnv />
-            <span>设置系统规则（AI的角色）：</span>
+            <span>设置系统规则（AI的角色｜你需要AI始终记住的事）：</span>
           </div>
           <div>
             <textarea
